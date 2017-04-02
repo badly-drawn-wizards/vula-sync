@@ -13,7 +13,6 @@ import Control.Monad (void, when, unless)
 
 readCreateProcessEither :: CreateProcess -> String -> VulaM String
 readCreateProcessEither createProcess input = do
-  liftIO $ putStrLn $ "Running " ++ show createProcess
   (exitCode, out, err) <- liftIO $ readCreateProcessWithExitCode createProcess input
   case exitCode of
     ExitSuccess -> return out
