@@ -14,7 +14,6 @@ extra-source-files:  README.md
 cabal-version:       >=1.10
 
 executable vula-sync
-  exposed-modules:     Main
   other-modules:       Shell
                      , Types
                      , VulaSync
